@@ -1,12 +1,4 @@
 /**
- * HelloWorld.java - Simple Java Hello World program
- * @author Suresh Melvin Sigera
- * @version 1.0
- *
-/**
-
-
-/**
  * THIS IS A COMMENT BLOCK
  * CUNY/CSI CSC 330 WEEK 1 - EXAMPLE 1
  *
