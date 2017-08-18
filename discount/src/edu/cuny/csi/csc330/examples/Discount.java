@@ -1,3 +1,6 @@
+/**
+ * Discount.java - Lecture Lab 02 initial commit.
+ */
 package edu.cuny.csi.csc330.examples;
 
 public class Discount {
