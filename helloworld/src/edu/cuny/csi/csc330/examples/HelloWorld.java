@@ -1,6 +1,6 @@
 /**
  * Course: 330-E001(12968)
- * Filename : lab1.cpp
+ * Filename : HelloWorld.java
  * Purpose: Print Hello World, and current system time to the standard output.
  * @author Suresh Melvin Sigera
  * @date 08/10/2017
