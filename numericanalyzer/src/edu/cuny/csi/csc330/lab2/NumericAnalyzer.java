@@ -4,7 +4,7 @@ package edu.cuny.csi.csc330.lab2;
  * Course: 330-E001(12968)
  * Filename : NumericAnalyzer.java
  * Purpose: This program analyze numerical data from the array, such as sum, mean, median, variance, min, max, range
- * std.
+ * and std.
  *
  * @author Suresh Melvin Sigera
  * @date 08/10/2017
