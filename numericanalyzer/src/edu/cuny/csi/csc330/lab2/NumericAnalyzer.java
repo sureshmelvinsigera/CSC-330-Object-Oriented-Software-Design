@@ -118,7 +118,6 @@ public class NumericAnalyzer {
 
     private void display() {
         sortedAscending(input);
-        //System.out.printf("Size:%20d\nMedian:%20.2f*%n", size, median);
         System.out.printf("Size:\t\t\t\t\t\t%d\n", size);
         System.out.printf("Min:\t\t\t\t\t\t%.2f\n", min);
         System.out.printf("Max:\t\t\t\t\t\t%.2f\n", max);
@@ -132,7 +131,7 @@ public class NumericAnalyzer {
 
     public static void main(String args[]) {
         if (args.length == 0) {
-            System.err.print("Please enter some arguments");
+            System.err.print("Pass in 1 or more positive integer number values.");
             System.exit(1);
         }
 
