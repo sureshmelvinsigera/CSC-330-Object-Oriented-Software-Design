@@ -14,7 +14,15 @@ import java.util.Arrays;
 
 public class NumericAnalyzer {
 
-    private double input[], mean, sum, median, variance, min, max, range, std;
+    private double input[];
+    private double mean;
+    private double sum;
+    private double median;
+    private double variance;
+    private double min;
+    private double max;
+    private double range;
+    private double std;
     private int size;
 
     /**
