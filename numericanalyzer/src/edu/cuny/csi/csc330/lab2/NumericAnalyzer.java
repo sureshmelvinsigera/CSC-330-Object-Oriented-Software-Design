@@ -17,13 +17,17 @@ public class NumericAnalyzer {
     private static double input[], mean, sum, median, variance, min, max, range, std;
     private static int size;
 
+    /**
+     * Parse string to integers
+     * @param args
+     */
     public NumericAnalyzer(String args[]) {
         input = new double[args.length];
         for (int i = 0; i < args.length; i++)
             input[i] = Integer.parseInt(args[i]);
     }
 
-    private void sortedAscending(double input[]) {
+    private static void sortedAscending(double input[]) {
         Arrays.sort(input);
         for (double n : input) {
             System.out.printf("%-8.2f", n);
@@ -31,11 +35,11 @@ public class NumericAnalyzer {
         System.out.print("\n");
     }
 
-    private int getSize(double input[]) {
+    private static int getSize(double input[]) {
         return input.length;
     }
 
-    private double getMax(double input[]) {
+    private static double getMax(double input[]) {
         double max = input[0];
         for (int i = 1; i < input.length; i++) {
             if (input[i] > max) {
@@ -45,7 +49,7 @@ public class NumericAnalyzer {
         return max;
     }
 
-    private double getMin(double input[]) {
+    private static double getMin(double input[]) {
         double min = input[0];
         for (int i = 1; i < input.length; i++) {
             if (input[i] < min) {
@@ -55,22 +59,22 @@ public class NumericAnalyzer {
         return min;
     }
 
-    private double getSum(double input[]) {
+    private static double getSum(double input[]) {
         double total = 0;
         for (int i = 0; i < input.length; i++)
             total += input[i];
         return total;
     }
 
-    private double getMean(double input[]) {
-        double mean = 0, total = 0;
+    private static double getMean(double input[]) {
+        double total = 0;
         for (int i = 0; i < input.length; i++) {
             total = total + input[i];
         }
-        return mean = total / input.length;
+        return (total / input.length);
     }
 
-    private double getMedian(double input[]) {
+    private static double getMedian(double input[]) {
         Arrays.sort(input);
         double median = 0;
         double pos1 = Math.floor((input.length - 1.0) / 2.0);
@@ -83,13 +87,12 @@ public class NumericAnalyzer {
         return median;
     }
 
-    public double getRange(double input[]) {
+    public static double getRange(double input[]) {
         return getMax(input) - getMin(input);
     }
 
-    private double getVariance(double inputs[]) {
+    private static double getVariance(double inputs[]) {
         double variance = 0;
-
         for (int i = 0; i < inputs.length; ++i) {
             variance += (inputs[i] - getMean(inputs)) * (inputs[i] - getMean(inputs));
         }
@@ -97,10 +100,9 @@ public class NumericAnalyzer {
         return variance;
     }
 
-    private double getStd(double inputs[]) {
+    private static double getStd(double inputs[]) {
         return Math.sqrt(getVariance(inputs));
     }
-
 
     private void calculate() {
         sum = getSum(input);
