@@ -119,15 +119,15 @@ public class NumericAnalyzer {
     private void display() {
         sortedAscending(input);
         //System.out.printf("Size:%20d\nMedian:%20.2f*%n", size, median);
-        System.out.printf("Size:%38d\n", size);
-        System.out.printf("Min:%45.2f\n", min);
-        System.out.printf("Max:%45.2f\n", max);
-        System.out.printf("Range%45.2f:\n", range);
-        System.out.printf("Sum:%45.2f\n", sum);
-        System.out.printf("Mean:%45.2f\n", mean);
-        System.out.printf("Median:%45.2f\n", median);
-        System.out.printf("Variance:%45.2f\n", variance);
-        System.out.printf("Standard Deviation:%45.2f\n", std);
+        System.out.printf("Size:\t\t\t\t\t\t%d\n", size);
+        System.out.printf("Min:\t\t\t\t\t\t%.2f\n", min);
+        System.out.printf("Max:\t\t\t\t\t\t%.2f\n", max);
+        System.out.printf("Range:\t\t\t\t\t\t%.2f\n", range);
+        System.out.printf("Sum:\t\t\t\t\t\t%.2f\n", sum);
+        System.out.printf("Mean:\t\t\t\t\t\t%.2f\n", mean);
+        System.out.printf("Median:\t\t\t\t\t\t%.2f\n", median);
+        System.out.printf("Variance:\t\t\t\t\t%.2f\n", variance);
+        System.out.printf("Standard Deviation:\t\t\t%.2f\n", std);
     }
 
     public static void main(String args[]) {
