@@ -4,7 +4,7 @@ package edu.cuny.csi.csc330.lab2;
  * Course: 330-E001(12968)
  * Filename : NumericAnalyzer.java
  * Purpose: This program analyze numerical data from the array, such as sum, mean, median, variance, min, max, range
- * and std.
+ * and standard deviation.
  *
  * @author Suresh Melvin Sigera
  * @date 08/10/2017
@@ -28,7 +28,6 @@ public class NumericAnalyzer {
         for (double n : input) {
             System.out.printf("%-8.2f", n);
         }
-
         System.out.print("\n");
     }
 
@@ -37,23 +36,23 @@ public class NumericAnalyzer {
     }
 
     private double getMax(double input[]) {
-        double m = input[0];
+        double max = input[0];
         for (int i = 1; i < input.length; i++) {
-            if (input[i] > m) {
-                m = input[i];
+            if (input[i] > max) {
+                max = input[i];
             }
         }
-        return m;
+        return max;
     }
 
     private double getMin(double input[]) {
-        double m = input[0];
+        double min = input[0];
         for (int i = 1; i < input.length; i++) {
-            if (input[i] < m) {
-                m = input[i];
+            if (input[i] < min) {
+                min = input[i];
             }
         }
-        return m;
+        return min;
     }
 
     private double getSum(double input[]) {
@@ -84,20 +83,22 @@ public class NumericAnalyzer {
         return median;
     }
 
+    public double getRange(double input[]) {
+        return getMax(input) - getMin(input);
+    }
 
     private double getVariance(double inputs[]) {
         double variance = 0;
-        mean = getMean(inputs);
+
         for (int i = 0; i < inputs.length; ++i) {
-            variance += (inputs[i] - mean) * (inputs[i] - mean);
+            variance += (inputs[i] - getMean(inputs)) * (inputs[i] - getMean(inputs));
         }
         variance /= inputs.length;
         return variance;
     }
 
     private double getStd(double inputs[]) {
-        double std = getVariance(inputs);
-        return Math.sqrt(std);
+        return Math.sqrt(getVariance(inputs));
     }
 
 
@@ -108,6 +109,7 @@ public class NumericAnalyzer {
         min = getMin(input);
         mean = getMean(input);
         median = getMedian(input);
+        range = getRange(input);
         variance = getVariance(input);
         std = getStd(input);
     }
